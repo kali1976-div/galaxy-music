@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Music-Player</title>
+    <link rel="stylesheet" href="Music-Player.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+<body>
+<div class="main-container">
+    <header class="music-player-header">
+        <h2 class="music-player-header-h2"><i class="fa-solid fa-music" style="color: rgb(128 128 255 / 0.93);"></i> Galaxy</h2>
+        <div class="music-player-controls-btns">
+          <a id="music-player-header-btn-1" class="music-player-header-btn">
+          <i class="fa-solid fa-house" ></i> Home
+      </a>
+      <a id="music-player-header-btn-2" class="music-player-header-btn">
+        <i  class="fa-regular fa-compass" ></i> Explore
+      </a>
+      <a id="music-player-header-btn-3" class="music-player-header-btn">
+        <i class="fa-regular fa-file music-player-header-i" ></i> Library
+      </a>
+      <a id="music-player-header-btn-4" class="music-player-header-btn">
+        <i class="fa-regular fa-heart music-player-header-i" ></i> Favorites
+      </a>
+        <div class="music-player-header-search">
+            <i id="music-player-header-search-icon" class="fa-solid fa-magnifying-glass "></i>
+            <label for="music-player-header-search-input"></label>
+            <input id="music-player-header-search-input" type="text" placeholder="Search">
+        </div>
+         <a href="#" id="themeBtn" class="music-player-header-theme">
+             <i class="fa-regular fa-moon" id="themeIcon"></i>
+         </a>
+        <div class="music-player-header-profile-all">
+            <img src="../images-cource/profile.png" class="music-player-header-profile" alt="">
+        </div>
+    </div>
+    </header>
+
+    <div class="music-player-main">
+      <div class="music-player-img">
+         <!--   this div is for image we selected in css -->
+      </div>
+        <div class="music-player-info">
+            <div class="main-player-text">
+                <h2 class="music-player-info-title" id="main-title">Him and I</h2>
+                   <p class="music-player-info-by" id="main-artist">by Halsey G-Eazy</p>
+                      <h3 id="main-famous-title">Famous Song of Halsey</h3>
+                  <p class="famous-1" id="famous1">1 : Without Me</p>
+               <p class="famous-2" id="famous2">2 : Bad At Love</p>
+            <p class="famous-3" id="famous3">3 : Now Or Never</p>
+        </div>
+        <audio id="music-player-info-audio" >
+            <source src="../music-source/animals.mp3" >
+        </audio>
+        <label for="music-player-info-range"></label><input type="range" value="" id="music-player-info-range">
+        <div class="music-player-info-buttons">
+            <a ><i id="button-back" class="fa-solid fa-backward-step"></i></a>
+            <a onclick="playPause()" id="button-stop"><i class="fa-solid fa-play" id="music-player-btn-stop"></i></a>
+            <a ><i  id="button-front" class="fa-solid fa-forward-step"></i></a>
+                </div>
+            </div>
+        </div>
+        <!--for sidebar of music-->
+        <div class="music-playlist-sidebar">
+            <div class="music-playlist-sidebar-header" id="music-playlist-1">
+                <h5 class="music-playlist-h3" >
+            <i class="fa-solid fa-bars" ></i>
+           Playing Next :
+        </h5>
+        <h5 class="music-playlist-h3" id="music-playlist-2">
+            <i class="fa-solid fa-music"></i>
+            PlayList :
+        </h5>
+     </div>
+         <div class="music-playlist-song-lists" >
+             <div class="song-lists-all">
+               <div class="song-lists-image" id="image-1">
+                   <img id="song-lists-pic-1" class="song-lists-pic"  src="../image-source-list/image-1.webp" alt="">
+               </div>
+                 <div class="song-lists-name">
+                    <p class="song-lists-name-h5" id="song-name-1">
+                       Animals
+                   </p>
+                   <h5 class="song-lists-name-para" id="song-writer-1">
+                      by Maroon
+                   </h5>
+                   <div class="song-list-fav">
+                       <i id="fav-1" class="fa-regular fa-heart heart" ></i>
+                   </div>
+                </div>
+             </div>
+             <!-- for another or second song we have...-->
+
+             <div class="song-lists-all">
+                 <div class="song-lists-image" id="image-2">
+                     <img id="song-lists-pic-2" class="song-lists-pic"  src="../image-source-list/image-3.webp" alt="">
+                 </div>
+                 <div class="song-lists-name">
+                     <p class="song-lists-name-h5" id="song-name-2">
+                         Attention
+                     </p>
+                     <h5 class="song-lists-name-para" id="song-writer-2">
+                         by Charlie Puth
+                     </h5>
+                     <div class="song-list-fav">
+                         <i id="fav-2" class="fa-regular fa-heart heart" ></i>
+                     </div>
+                 </div>
+             </div>
+                 <!--  for third song we have -->
+             <div class="song-lists-all">
+                 <div class="song-lists-image" id="image-3">
+                     <img id="song-lists-pic-3" class="song-lists-pic"  src="../image-source-list/image-4.webp" alt="">
+                 </div>
+                 <div class="song-lists-name">
+                     <p class="song-lists-name-h5" id="song-name-3">
+                         Him and I
+                     </p>
+                     <h5 class="song-lists-name-para" id="song-writer-3">
+                         by  Frank Sinatra
+                     </h5>
+                     <div class="song-list-fav">
+                         <i id="fav-3" class="fa-regular fa-heart heart" ></i>
+                     </div>
+                 </div>
+             </div>
+
+
+             <div class="song-lists-all" >
+                 <div class="song-lists-image" id="image-4">
+                     <img id="song-lists-pic-4" class="song-lists-pic"  src="../image-source-list/image-5.webp" alt="">
+                 </div>
+                 <div class="song-lists-name">
+                     <p class="song-lists-name-h5" id="song-name-4">
+                         Once Upon a Time
+                     </p>
+                     <h5 class="song-lists-name-para" id="song-writer-4">
+                         by  Tony Bennett
+                     </h5>
+                     <div class="song-list-fav">
+                         <i id="fav-4" class="fa-regular fa-heart heart" ></i>
+                     </div>
+                 </div>
+             </div>
+
+             <div class="song-lists-all">
+                 <div class="song-lists-image" id="image-5">
+                     <img id="song-lists-pic-5" class="song-lists-pic"  src="../image-source-list/image-6.webp" alt="">
+                 </div>
+                 <div class="song-lists-name">
+                     <p class="song-lists-name-h5" id="song-name-5">
+                         She doesn't Mind
+                     </p>
+                     <h5 class="song-lists-name-para" id="song-writer-5">
+                         by Sean Paul
+                     </h5>
+                     <div class="song-list-fav">
+                         <i id="fav-5" class="fa-regular fa-heart heart" ></i>
+                     </div>
+                 </div>
+             </div>
+
+
+             <div class="song-lists-all">
+                 <div class="song-lists-image" id="image-6">
+                     <img id="song-lists-pic-6" class="song-lists-pic"  src="../image-source-list/image-7.webp" alt="">
+                 </div>
+                 <div class="song-lists-name">
+                     <p class="song-lists-name-h5" id="song-name-6">
+                         SugarCrash
+                     </p>
+                     <h5 class="song-lists-name-para" id="song-writer-6">
+                         by ElyOtto
+                     </h5>
+                     <div class="song-list-fav">
+                         <i id="fav-6" class="fa-regular fa-heart heart" ></i>
+                     </div>
+                 </div>
+             </div>
+
+
+             <div class="song-lists-all">
+                 <div class="song-lists-image" id="image-7">
+                     <img id="song-lists-pic-7" class="song-lists-pic"  src="../image-source-list/image-8.webp" alt="">
+                 </div>
+                 <div class="song-lists-name">
+                     <p class="song-lists-name-h5" id="song-name-7">
+                          A Wannabe
+                     </p>
+                     <h5 class="song-lists-name-para" id="song-writer-7">
+                         by Karaoke
+                     </h5>
+                     <div class="song-list-fav">
+                         <i id="fav-7" class="fa-regular fa-heart heart" ></i>
+                     </div>
+                 </div>
+             </div>
+        </div>
+     </div>
+</div>
+
+ <script src="Music-Player.js"></script>
+</body>
+</html>
+<!--for source code I4RF77FA3PM0X2-->
+<!--developer by galaxy-->
+<!--any copy right or change without developer permission is prohibited-->
